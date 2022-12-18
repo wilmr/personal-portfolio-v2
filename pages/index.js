@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
+import Image from 'next/image';
+import design from '../public/design.png';
 
 export default function Home() {
 	return (
@@ -12,10 +14,10 @@ export default function Home() {
 					<meta name="viewport" content="width=device-width, initial-scale=1" />
 					<link rel="icon" href="/favicon.ico" />
 				</Head>
-				<main className="bg-white px-10">
+				<main className="bg-green-200 px-10">
 					<section className="min-h-screen">
 						<nav className="py-10 mb-12 flex justify-between">
-							<h1 className="text-xl font-burtons">wilmer martinez</h1>
+							<h1 className="text-xl font-burtons">WM</h1>
 							<ul className="flex items-center">
 								<li>
 									<BsFillMoonStarsFill className="cursor-pointer text-2xl" />
@@ -31,7 +33,7 @@ export default function Home() {
 							</ul>
 						</nav>
 						<div className="text-center p-10">
-							<h2 className="text-5xl py-2 text-teal-600 font-medium">
+							<h2 className="text-5xl py-2 text-teal-600 font-medium font-burtons">
 								Wilmer Martinez
 							</h2>
 							<h3 className="text-2xl py-2">Full Stack Web Developer</h3>
@@ -45,6 +47,63 @@ export default function Home() {
 						<div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
 							<AiFillLinkedin />
 							<AiFillGithub />
+						</div>
+					</section>
+					<section>
+						<div>
+							<h3 className="text-3xl py-1">Services I offer</h3>
+							<p className="text-md py-2 leading-8 text-gray-800">
+								since the beggingin of time
+							</p>
+						</div>
+						<div>
+							<div className="text-center  shadow-lg p-10 rounded-xl my-10">
+								<Image
+									className="mx-auto"
+									src={design}
+									width={100}
+									height={100}
+								/>
+								<h3 className="text-lg font-medium pt-8 pb-2">
+									Beautiful designs
+								</h3>
+								<p className="py- 2">Creating elegant designs for your needs</p>
+								<h4 className="py-4 text-teal-600">Design tools I use</h4>
+								<p className="text-gray-800 py-1"></p>
+							</div>
+							<div className="text-center  shadow-lg p-10 rounded-xl my-10">
+								<Image
+									className="mx-auto"
+									src={design}
+									width={100}
+									height={100}
+								/>
+								<h3 className="text-lg font-medium pt-8 pb-2">
+									Beautiful designs
+								</h3>
+								<p className="py- 2">Creating elegant designs for your needs</p>
+								<h4 className="py-4 text-teal-600">Design tools I use</h4>
+								<p className="text-gray-800 py-1"></p>
+							</div>
+							<div className="text-center  shadow-lg p-10 rounded-xl my-10">
+								<Image
+									className="mx-auto"
+									src={design}
+									width={100}
+									height={100}
+								/>
+								<h3 className="text-lg font-medium pt-8 pb-2">
+									Beautiful designs
+								</h3>
+								<p className="py- 2">Creating elegant designs for your needs</p>
+								<h4 className="py-4 text-teal-600">Design tools I use</h4>
+								<p className="text-gray-800 py-1"></p>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div>
+							<h3 className="text-3xl py-1">Projects</h3>
 						</div>
 					</section>
 				</main>
