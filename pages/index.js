@@ -10,9 +10,33 @@ import deepthoughts from '../public/deepthoughts.png';
 import photoport from '../public/photoport.png';
 import musicenvivo from '../public/musicenvivo.png';
 import { useState } from 'react';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+//import EmailSentModal from '../components/EmailModal';
 
 export default function Home() {
 	const [darkMode, setDarkMode] = useState(false);
+	const form = useRef();
+	const sendEmail = (e) => {
+		e.preventDefault();
+
+		emailjs
+			.sendForm(
+				'service_cyxh6g9',
+				'template_0i6x6lr',
+				form.current,
+				'avDf71P-wy8sNIBQc'
+			)
+			.then(
+				(result) => {
+					console.log(result.text);
+				},
+				(error) => {
+					console.log(error.text);
+				}
+			);
+		e.target.reset();
+	};
 	return (
 		<>
 			<div className={darkMode ? 'dark' : ''}>
@@ -55,13 +79,14 @@ export default function Home() {
 							</h3>
 							<p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto dark:text-white">
 								As a lifelong tech enthusiast, I have always been drawn to the
-								world of web development. With a backgorund in computer science
-								and a natural aptitude for problem-solving, I have the skills
-								and knowledge to create functional and visually appealing
-								websites. In my spare time, you can find me tinkering with new
-								technologies, staying up-to-date with the latest web development
-								trends, and collaborating with other professionals in the
-								industry.
+								world of web development. In 2022 I began training in modern app
+								development at UC Davis Coding Bootcamp. With a backgorund in
+								computer science and a natural aptitude for problem-solving, I
+								have the skills and knowledge to create functional and visually
+								appealing websites. In my spare time, you can find me tinkering
+								with new technologies, staying up-to-date with the latest web
+								development trends, and collaborating with other professionals
+								in the industry.
 							</p>
 						</div>
 						<div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-white">
@@ -235,6 +260,60 @@ export default function Home() {
 							</div>
 						</div>
 					</section>
+					<section className="mt-20 p-10 bg-gray-100 rounded-md">
+						<h3 className="text-2xl font-medium mb-8 text-center">Contact</h3>
+						<form ref={form} onSubmit={sendEmail}>
+							<div className="flex flex-col md:flex-row md:items-center mb-6">
+								<label htmlFor="name" className="w-full md:w-1/4 mb-2 md:mb-0">
+									Name
+								</label>
+								<input
+									type="text"
+									id="name"
+									name="user_name"
+									placeholder="John Doe"
+									className="w-full md:w-3/4 p-2 border rounded-md"
+								/>
+							</div>
+							<div className="flex flex-col md:flex-row md:items-center mb-6">
+								<label htmlFor="email" className="w-full md:w-1/4 mb-2 md:mb-0">
+									Email
+								</label>
+								<input
+									type="email"
+									id="email"
+									name="user_email"
+									placeholder="john@example.com"
+									className="w-full md:w-3/4 p-2 border rounded-md"
+								/>
+							</div>
+							<div className="flex flex-col md:flex-row md:items-center mb-6">
+								<label
+									htmlFor="message"
+									className="w-full md:w-1/4 mb-2 md:mb-0"
+								>
+									Message
+								</label>
+								<textarea
+									id="message"
+									name="message"
+									placeholder="Enter your message here"
+									rows="6"
+									className="w-full md:w-3/4 p-2 border rounded-md"
+								></textarea>
+							</div>
+							<div className="text-center">
+								<button
+									type="submit"
+									value="Send"
+									className="bg-teal-500 text-white px-4 py-2 rounded-md"
+								>
+									Submit
+								</button>
+							</div>
+						</form>
+					</section>
+					<div className="py-10"></div>
 				</main>
 				<footer className="py-8 text-center text-gray-600 dark:text-gray-400 bg-gray-200 dark:bg-gray-800">
 					<p>Copyright &copy; {new Date().getFullYear()} Wilmer Martinez</p>
