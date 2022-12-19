@@ -65,8 +65,21 @@ export default function Home() {
 							</p>
 						</div>
 						<div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-white">
-							<AiFillLinkedin />
-							<AiFillGithub />
+							<a
+								href="https://www.linkedin.com/in/wilmer-martinez/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<AiFillLinkedin />
+							</a>
+							<a
+								href="https://github.com/wilmr"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								{' '}
+								<AiFillGithub />
+							</a>
 						</div>
 					</section>
 					<section>
@@ -226,10 +239,18 @@ export default function Home() {
 				<footer className="py-8 text-center text-gray-600 dark:text-gray-400 bg-gray-200 dark:bg-gray-800">
 					<p>Copyright &copy; {new Date().getFullYear()} Wilmer Martinez</p>
 					<div className="flex justify-center mt-4">
-						<a href="#">
+						<a
+							href="https://www.linkedin.com/in/wilmer-martinez/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							<AiFillLinkedin className="text-xl mx-4" />
 						</a>
-						<a href="#">
+						<a
+							href="https://github.com/wilmr"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							<AiFillGithub className="text-xl mx-4" />
 						</a>
 					</div>
