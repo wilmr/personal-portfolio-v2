@@ -2,13 +2,13 @@ import Head from 'next/head';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
 import Image from 'next/image';
-import design from '../public/design.png';
-import web1 from '../public/web1.png';
-import web2 from '../public/web2.png';
-import web3 from '../public/web3.png';
-import web4 from '../public/web4.png';
-import web5 from '../public/web5.png';
-import web6 from '../public/web6.png';
+import frontend from '../public/frontend.png';
+import server from '../public/server.png';
+import tools from '../public/tools.png';
+import musicmarket from '../public/musicmarket.png';
+import deepthoughts from '../public/deepthoughts.png';
+import photoport from '../public/photoport.png';
+import musicenvivo from '../public/musicenvivo.png';
 import { useState } from 'react';
 
 export default function Home() {
@@ -37,7 +37,9 @@ export default function Home() {
 								<li>
 									<a
 										className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
-										href="#"
+										href="https://drive.google.com/file/d/1TK6vL4SM8r7kdgdF4ktqcmivsV66I7PM/view?usp=sharing"
+										target="_blank"
+										rel="noopener noreferrer"
 									>
 										Resume
 									</a>
@@ -80,7 +82,7 @@ export default function Home() {
 							<div className="text-center  shadow-lg p-10 rounded-xl my-10 dark:bg-white">
 								<Image
 									className="mx-auto"
-									src={design}
+									src={frontend}
 									width={100}
 									height={100}
 								/>
@@ -103,7 +105,7 @@ export default function Home() {
 							<div className="text-center  shadow-lg p-10 rounded-xl my-10 dark:bg-white">
 								<Image
 									className="mx-auto"
-									src={design}
+									src={server}
 									width={100}
 									height={100}
 								/>
@@ -126,14 +128,14 @@ export default function Home() {
 							<div className="text-center  shadow-lg p-10 rounded-xl my-10 dark:bg-white">
 								<Image
 									className="mx-auto"
-									src={design}
+									src={tools}
 									width={100}
 									height={100}
 								/>
 								<h3 className="text-lg font-medium pt-8 pb-2">Tools</h3>
 								<p className="py-2">
-									Development tools that are used to support the development,
-									testing, and maintenance of software applications.
+									SWE tools used to support the development, testing, and
+									maintenance of software applications.
 								</p>
 								<h4 className="py-4 text-teal-600">Dev Tools I use</h4>
 								<ul className="text-gray-800 py-2 dark:bg-gray-200 rounded-lg font-bold">
@@ -151,64 +153,72 @@ export default function Home() {
 					<section>
 						<div>
 							<h3 className="text-3xl py-1 dark:text-white">Projects</h3>
-							<p className="text-md py-2 leading-8 text-gray-800 dark:text-white">
-								some projects
-							</p>
 						</div>
 						<div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
 							<div className="basis-1/3 flex-1">
-								<Image
-									src={web1}
-									className="rounded-lg object-cover"
-									width={'100%'}
-									height={'100%'}
-									layout="responsive"
-								/>
+								<h3 className="text-medium text-center">Music Market</h3>
+								<a
+									href="https://g02-music-market.herokuapp.com/"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<Image
+										src={musicmarket}
+										className="rounded-lg object-cover"
+										width={'100%'}
+										height={'100%'}
+										layout="responsive"
+									/>
+								</a>
 							</div>
 							<div className="basis-1/3 flex-1">
-								<Image
-									src={web2}
-									className="rounded-lg object-cover"
-									width={'100%'}
-									height={'100%'}
-									layout="responsive"
-								/>
+								<h3 className="text-medium text-center">Deep Thoughts</h3>
+								<a
+									href="https://cryptic-wave-02667.herokuapp.com/"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<Image
+										src={deepthoughts}
+										className="rounded-lg object-cover"
+										width={'100%'}
+										height={'100%'}
+										layout="responsive"
+									/>
+								</a>
 							</div>
 							<div className="basis-1/3 flex-1">
-								<Image
-									src={web3}
-									className="rounded-lg object-cover"
-									width={'100%'}
-									height={'100%'}
-									layout="responsive"
-								/>
+								<h3 className="text-medium text-center">Photo Port</h3>
+								<a
+									href="https://wilmr.github.io/photo-port/"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<Image
+										src={photoport}
+										className="rounded-lg object-cover"
+										width={'100%'}
+										height={'100%'}
+										layout="responsive"
+									/>
+								</a>
 							</div>
 							<div className="basis-1/3 flex-1">
-								<Image
-									src={web4}
-									className="rounded-lg object-cover"
-									width={'100%'}
-									height={'100%'}
-									layout="responsive"
-								/>
-							</div>
-							<div className="basis-1/3 flex-1">
-								<Image
-									src={web5}
-									className="rounded-lg object-cover"
-									width={'100%'}
-									height={'100%'}
-									layout="responsive"
-								/>
-							</div>
-							<div className="basis-1/3 flex-1">
-								<Image
-									src={web6}
-									className="rounded-lg object-cover"
-									width={'100%'}
-									height={'100%'}
-									layout="responsive"
-								/>
+								<h3 className="text-medium text-center">Music en Vivo</h3>
+
+								<a
+									href="https://wilmr.github.io/Music-en-Vivo/"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<Image
+										src={musicenvivo}
+										className="rounded-lg object-cover"
+										width={'100%'}
+										height={'100%'}
+										layout="responsive"
+									/>
+								</a>
 							</div>
 						</div>
 					</section>
