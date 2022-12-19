@@ -23,7 +23,8 @@ export default function Home() {
 					<link rel="icon" href="/favicon.ico" />
 				</Head>
 				<main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
-					<section className="min-h-screen">
+					{/* add min-h-screen to section to take full vh */}
+					<section className="">
 						<nav className="py-10 mb-12 flex justify-between">
 							<h1 className="text-xl font-burtons dark:text-white">WM</h1>
 							<ul className="flex items-center">
@@ -51,10 +52,14 @@ export default function Home() {
 								Full Stack Web Developer
 							</h3>
 							<p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto dark:text-white">
-								Lorem Ipsum is simply dummy text of the printing and typesetting
-								industry. Lorem Ipsum has been the industry's standard dummy
-								text ever since the 1500s, when an unknown printer took a galley
-								of type and scrambled it to make a type specimen book.
+								As a lifelong tech enthusiast, I have always been drawn to the
+								world of web development. With a backgorund in computer science
+								and a natural aptitude for problem-solving, I have the skills
+								and knowledge to create functional and visually appealing
+								websites. In my spare time, you can find me tinkering with new
+								technologies, staying up-to-date with the latest web development
+								trends, and collaborating with other professionals in the
+								industry.
 							</p>
 						</div>
 						<div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-white">
@@ -64,11 +69,11 @@ export default function Home() {
 					</section>
 					<section>
 						<div>
-							<h3 className="text-3xl py-1 dark:text-white">
-								Services I offer
-							</h3>
+							<h3 className="text-3xl py-1 dark:text-white">Skills</h3>
 							<p className="text-md py-2 leading-8 text-gray-800 dark:text-white">
-								since the beggingin of time
+								"Web development skills are like spices - a little goes a long
+								way, but the right blend can take your site from bland to
+								grand."
 							</p>
 						</div>
 						<div className="lg:flex gap-10">
@@ -79,12 +84,21 @@ export default function Home() {
 									width={100}
 									height={100}
 								/>
-								<h3 className="text-lg font-medium pt-8 pb-2">
-									Beautiful designs
-								</h3>
-								<p className="py- 2">Creating elegant designs for your needs</p>
-								<h4 className="py-4 text-teal-600">Design tools I use</h4>
-								<p className="text-gray-800 py-1"></p>
+								<h3 className="text-lg font-medium pt-8 pb-2">Front End</h3>
+								<p className="py-2">
+									Front-end tools used to develop the user interface and user
+									experience of a website or application.
+								</p>
+								<h4 className="py-4 text-teal-600">Front End tools I use :</h4>
+								<ul className="text-gray-800 py-2 dark:bg-gray-200 rounded-lg font-bold">
+									<li>JavaScript</li>
+									<li>React</li>
+									<li>NextJS</li>
+									<li>HTML5</li>
+									<li>CSS3</li>
+									<li>BootStrap</li>
+									<li>TailwindCSS</li>
+								</ul>
 							</div>
 							<div className="text-center  shadow-lg p-10 rounded-xl my-10 dark:bg-white">
 								<Image
@@ -93,12 +107,21 @@ export default function Home() {
 									width={100}
 									height={100}
 								/>
-								<h3 className="text-lg font-medium pt-8 pb-2">
-									Beautiful designs
-								</h3>
-								<p className="py- 2">Creating elegant designs for your needs</p>
-								<h4 className="py-4 text-teal-600">Design tools I use</h4>
-								<p className="text-gray-800 py-1"></p>
+								<h3 className="text-lg font-medium pt-8 pb-2">Back End</h3>
+								<p className="py-2">
+									Back-end tools used to build and manage the server-side
+									infrastructure and logic of a website or application.
+								</p>
+								<h4 className="py-4 text-teal-600">Back End tools I use</h4>
+								<ul className="text-gray-800 py-2 dark:bg-gray-200 rounded-lg font-bold">
+									<li>Node</li>
+									<li>Express</li>
+									<li>MongoDB</li>
+									<li>MySQL</li>
+									<li>Sequelize</li>
+									<li>GraphQL</li>
+									<li>REST API</li>
+								</ul>
 							</div>
 							<div className="text-center  shadow-lg p-10 rounded-xl my-10 dark:bg-white">
 								<Image
@@ -107,12 +130,21 @@ export default function Home() {
 									width={100}
 									height={100}
 								/>
-								<h3 className="text-lg font-medium pt-8 pb-2">
-									Beautiful designs
-								</h3>
-								<p className="py- 2">Creating elegant designs for your needs</p>
-								<h4 className="py-4 text-teal-600">Design tools I use</h4>
-								<p className="text-gray-800 py-1"></p>
+								<h3 className="text-lg font-medium pt-8 pb-2">Tools</h3>
+								<p className="py-2">
+									Development tools that are used to support the development,
+									testing, and maintenance of software applications.
+								</p>
+								<h4 className="py-4 text-teal-600">Dev Tools I use</h4>
+								<ul className="text-gray-800 py-2 dark:bg-gray-200 rounded-lg font-bold">
+									<li>GitHub</li>
+									<li>Git</li>
+									<li>Agile</li>
+									<li>Heroku</li>
+									<li>PWA</li>
+									<li>TDD</li>
+									<li>Webpack</li>
+								</ul>
 							</div>
 						</div>
 					</section>
@@ -181,6 +213,17 @@ export default function Home() {
 						</div>
 					</section>
 				</main>
+				<footer className="py-8 text-center text-gray-600 dark:text-gray-400 bg-gray-200 dark:bg-gray-800">
+					<p>Copyright &copy; {new Date().getFullYear()} Wilmer Martinez</p>
+					<div className="flex justify-center mt-4">
+						<a href="#">
+							<AiFillLinkedin className="text-xl mx-4" />
+						</a>
+						<a href="#">
+							<AiFillGithub className="text-xl mx-4" />
+						</a>
+					</div>
+				</footer>
 			</div>
 		</>
 	);
