@@ -24,7 +24,7 @@ function ContactForm() {
 		e.target.reset();
 	};
 	return (
-		<section className="mt-20 p-10 bg-gray-100 rounded-md">
+		<section className="mt-20 p-10 bg-gray-100 rounded-md dark:bg-slate-700">
 			<h3 className="text-2xl font-medium mb-8 text-center">Contact</h3>
 			<form ref={form} onSubmit={sendEmail}>
 				<div className="flex flex-col md:flex-row md:items-center mb-6">

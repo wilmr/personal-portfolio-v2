@@ -15,7 +15,7 @@ function Skills() {
 				</p>
 			</div>
 			<div className="lg:flex gap-10">
-				<div className="text-center  shadow-lg p-10 rounded-xl my-10 dark:bg-white">
+				<div className="text-center  shadow-lg p-10 rounded-xl my-10 dark:bg-slate-700">
 					<Image className="mx-auto" src={frontend} width={100} height={100} />
 					<h3 className="text-lg font-medium pt-8 pb-2">Front End</h3>
 					<p className="py-2">
@@ -33,7 +33,7 @@ function Skills() {
 						<li>TailwindCSS</li>
 					</ul>
 				</div>
-				<div className="text-center  shadow-lg p-10 rounded-xl my-10 dark:bg-white">
+				<div className="text-center  shadow-lg p-10 rounded-xl my-10 dark:bg-slate-700">
 					<Image className="mx-auto" src={server} width={100} height={100} />
 					<h3 className="text-lg font-medium pt-8 pb-2">Back End</h3>
 					<p className="py-2">
@@ -51,14 +51,14 @@ function Skills() {
 						<li>REST API</li>
 					</ul>
 				</div>
-				<div className="text-center  shadow-lg p-10 rounded-xl my-10 dark:bg-white">
+				<div className="text-center  shadow-lg p-10 rounded-xl my-10 dark:bg-slate-700">
 					<Image className="mx-auto" src={tools} width={100} height={100} />
 					<h3 className="text-lg font-medium pt-8 pb-2">Tools</h3>
 					<p className="py-2">
 						SWE tools used to support the development, testing, and maintenance
 						of software applications.
 					</p>
-					<h4 className="py-4 text-teal-600">Dev Tools I use</h4>
+					<h4 className="py-4 text-teal-600">Development Tools I use</h4>
 					<ul className="text-gray-800 py-2 dark:bg-gray-200 rounded-lg font-bold">
 						<li>GitHub</li>
 						<li>Git</li>

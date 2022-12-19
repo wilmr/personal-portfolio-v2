@@ -1,17 +1,15 @@
 import React from 'react';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
-import { useState } from 'react';
 
-function Nav() {
-	const [darkMode, setDarkMode] = useState(false);
+function Nav(props) {
 	return (
 		<nav className="py-10 mb-12 flex justify-between">
 			<h1 className="text-xl font-burtons dark:text-white">WM</h1>
 			<ul className="flex items-center">
 				<li>
 					<BsFillMoonStarsFill
-						onClick={() => setDarkMode(!darkMode)}
 						className="cursor-pointer text-2xl dark:fill-white"
+						onClick={props.toggleDarkMode}
 					/>
 				</li>
 				<li>
