@@ -5,6 +5,7 @@ import Nav from '../components/Nav';
 import Hero from '../components/Hero';
 import Skills from '../components/Skills';
 import Footer from '../components/Footer';
+import { Fade } from 'react-awesome-reveal';
 import Projects from '../components/Projects';
 import ContactForm from '../components/ContactForm';
 
@@ -24,10 +25,12 @@ export default function Home() {
 			<main className="bg-white px-10 py-10 md:px-20 lg:px-40 dark:bg-gray-900">
 				{/* add min-h-screen to section to take full vh */}
 				<Nav darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-				<Hero />
-				<Skills />
-				<Projects />
-				<ContactForm />
+				<Fade>
+					<Hero />
+					<Skills />
+					<Projects />
+					<ContactForm />
+				</Fade>
 			</main>
 			<Footer />
 		</div>
